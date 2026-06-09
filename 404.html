@@ -1,0 +1,649 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta name="robots" content="noindex, follow">
+
+    <!-- ================= BASIC SETUP ================= -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <title>Page Not Found (404) – Swastika Amruttulya Premium Tea</title>
+
+    <meta name="description"
+        content="The page you are looking for does not exist or has been moved. Visit Swastika Amruttulya homepage for premium Indian tea and franchise details." />
+
+    <!-- IMPORTANT: Prevent indexing -->
+    <meta name="robots" content="noindex, follow" />
+
+    <meta name="theme-color" content="#8b4513" />
+
+    <!-- ================= CANONICAL ================= -->
+    <link rel="canonical" href="https://swastikamruttulya.co.in/" />
+
+    <!-- ================= FAVICON ================= -->
+    <link rel="icon" type="image/png" href="images/favicon.png" />
+    <link rel="apple-touch-icon" href="images/favicon.png" />
+
+    <!-- ================= FONTS ================= -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet" />
+
+    <!-- ================= ICONS ================= -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" />
+
+    <!-- ================= CSS ================= -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/animation.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+</head>
+<style>
+    /* ── Brand tokens ── */
+    :root {
+        --saffron: #D97706;
+        --saffron-dark: #B45309;
+        --saffron-light: #FEF3C7;
+        --tea-brown: #3D1A07;
+        --cream: #FFFBF0;
+        --cream-dark: #FEF9EC;
+        --text-muted: #78564A;
+        --border: #F3DFB5;
+        --white: #FFFFFF;
+        --shadow: 0 4px 24px rgba(61, 26, 7, 0.10);
+        --shadow-lg: 0 12px 48px rgba(61, 26, 7, 0.16);
+        --font-head: 'Playfair Display', Georgia, serif;
+        --font-body: 'Poppins', sans-serif;
+        --radius: 16px;
+        --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    *,
+    *::before,
+    *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    html,
+    body {
+        width: 100%;
+        overflow-x: hidden;
+        background: var(--cream);
+        color: var(--tea-brown);
+        font-family: var(--font-body);
+    }
+
+    /* ── Navbar ── */
+    .navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 100;
+        background: rgba(255, 251, 240, 0.95);
+        backdrop-filter: blur(12px);
+        border-bottom: 1px solid var(--border);
+        padding: 0;
+    }
+
+    .nav-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 24px;
+        height: 70px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+    }
+
+    .nav-logo {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        text-decoration: none;
+        flex-shrink: 0;
+    }
+
+    .logo-icon {
+        width: 44px;
+        height: 44px;
+        background: linear-gradient(135deg, var(--saffron), var(--saffron-dark));
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--white);
+        font-size: 1.1rem;
+        box-shadow: 0 4px 12px rgba(217, 119, 6, 0.35);
+    }
+
+    .logo-name {
+        display: block;
+        font-family: var(--font-head);
+        font-size: 1.05rem;
+        font-weight: 700;
+        color: var(--tea-brown);
+        line-height: 1.1;
+    }
+
+    .logo-tagline {
+        display: block;
+        font-size: 0.6rem;
+        font-weight: 600;
+        letter-spacing: 0.12em;
+        color: var(--saffron);
+        text-transform: uppercase;
+    }
+
+    .nav-home-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: linear-gradient(135deg, var(--saffron), var(--saffron-dark));
+        color: var(--white);
+        font-family: var(--font-body);
+        font-size: 0.85rem;
+        font-weight: 600;
+        padding: 10px 22px;
+        border-radius: 50px;
+        text-decoration: none;
+        box-shadow: 0 4px 14px rgba(217, 119, 6, 0.35);
+        transition: var(--transition);
+        white-space: nowrap;
+    }
+
+    .nav-home-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 22px rgba(217, 119, 6, 0.45);
+    }
+
+    /* ── Main content ── */
+    main {
+        min-height: 100vh;
+        padding-top: 70px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        overflow: hidden;
+    }
+
+    /* warm radial glow background */
+    main::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 700px;
+        height: 700px;
+        background: radial-gradient(circle, rgba(217, 119, 6, 0.08) 0%, transparent 70%);
+        pointer-events: none;
+    }
+
+    /* floating tea-leaf decorations */
+    .leaf {
+        position: absolute;
+        font-size: 1.6rem;
+        opacity: 0.12;
+        animation: floatLeaf 8s ease-in-out infinite;
+        pointer-events: none;
+        user-select: none;
+    }
+
+    .leaf:nth-child(1) {
+        top: 12%;
+        left: 8%;
+        animation-delay: 0s;
+        animation-duration: 9s;
+    }
+
+    .leaf:nth-child(2) {
+        top: 20%;
+        right: 10%;
+        animation-delay: 1.5s;
+        animation-duration: 7s;
+    }
+
+    .leaf:nth-child(3) {
+        bottom: 22%;
+        left: 12%;
+        animation-delay: 3s;
+        animation-duration: 10s;
+    }
+
+    .leaf:nth-child(4) {
+        bottom: 18%;
+        right: 8%;
+        animation-delay: 2s;
+        animation-duration: 8s;
+    }
+
+    .leaf:nth-child(5) {
+        top: 55%;
+        left: 4%;
+        animation-delay: 4s;
+        animation-duration: 6s;
+    }
+
+    @keyframes floatLeaf {
+
+        0%,
+        100% {
+            transform: translateY(0) rotate(0deg);
+        }
+
+        33% {
+            transform: translateY(-18px) rotate(8deg);
+        }
+
+        66% {
+            transform: translateY(10px) rotate(-6deg);
+        }
+    }
+
+    /* ── Card ── */
+    .card {
+        position: relative;
+        z-index: 2;
+        text-align: center;
+        padding: 56px 48px;
+        max-width: 560px;
+        width: 100%;
+        margin: 24px;
+        background: var(--white);
+        border-radius: 28px;
+        box-shadow: var(--shadow-lg);
+        border: 1px solid var(--border);
+        animation: fadeSlideUp 0.7s cubic-bezier(0.4, 0, 0.2, 1) both;
+    }
+
+    @keyframes fadeSlideUp {
+        from {
+            opacity: 0;
+            transform: translateY(32px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    /* ── Cup SVG ── */
+    .cup-wrapper {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 24px;
+    }
+
+    .cup-svg {
+        width: 110px;
+        height: 110px;
+    }
+
+    /* steam lines animate */
+    .steam {
+        stroke-dasharray: 40;
+        animation: steamRise 2.5s ease-in-out infinite;
+    }
+
+    .steam-1 {
+        animation-delay: 0s;
+    }
+
+    .steam-2 {
+        animation-delay: 0.5s;
+    }
+
+    .steam-3 {
+        animation-delay: 1s;
+    }
+
+    @keyframes steamRise {
+        0% {
+            stroke-dashoffset: 40;
+            opacity: 0;
+        }
+
+        30% {
+            opacity: 1;
+        }
+
+        100% {
+            stroke-dashoffset: -40;
+            opacity: 0;
+        }
+    }
+
+    /* ── 404 number ── */
+    .error-code {
+        font-family: var(--font-head);
+        font-size: 6rem;
+        font-weight: 800;
+        line-height: 1;
+        background: linear-gradient(135deg, var(--saffron), var(--saffron-dark));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        margin-bottom: 8px;
+        letter-spacing: -2px;
+    }
+
+    /* ── Tag pill ── */
+    .tag {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        background: var(--saffron-light);
+        color: var(--saffron-dark);
+        font-size: 0.72rem;
+        font-weight: 700;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        padding: 5px 16px;
+        border-radius: 50px;
+        border: 1px solid rgba(217, 119, 6, 0.25);
+        margin-bottom: 20px;
+    }
+
+    .card h1 {
+        font-family: var(--font-head);
+        font-size: 1.9rem;
+        font-weight: 700;
+        color: var(--tea-brown);
+        line-height: 1.25;
+        margin-bottom: 14px;
+    }
+
+    .card h1 span {
+        color: var(--saffron);
+    }
+
+    .card p {
+        font-size: 0.95rem;
+        color: var(--text-muted);
+        line-height: 1.7;
+        margin-bottom: 32px;
+    }
+
+    /* ── Buttons ── */
+    .btn-group {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        justify-content: center;
+        margin-bottom: 36px;
+    }
+
+    .btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        font-family: var(--font-body);
+        font-size: 0.88rem;
+        font-weight: 600;
+        padding: 12px 24px;
+        border-radius: 50px;
+        text-decoration: none;
+        transition: var(--transition);
+        border: none;
+        cursor: pointer;
+    }
+
+    .btn-primary {
+        background: linear-gradient(135deg, var(--saffron), var(--saffron-dark));
+        color: var(--white);
+        box-shadow: 0 4px 16px rgba(217, 119, 6, 0.35);
+    }
+
+    .btn-primary:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 24px rgba(217, 119, 6, 0.45);
+    }
+
+    .btn-outline {
+        background: transparent;
+        color: var(--tea-brown);
+        border: 2px solid var(--border);
+    }
+
+    .btn-outline:hover {
+        border-color: var(--saffron);
+        color: var(--saffron);
+        transform: translateY(-2px);
+    }
+
+    /* ── Quick links ── */
+    .quick-links {
+        border-top: 1px solid var(--border);
+        padding-top: 24px;
+    }
+
+    .quick-links p {
+        font-size: 0.78rem;
+        color: var(--text-muted);
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        font-weight: 600;
+        margin-bottom: 14px;
+    }
+
+    .links-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: center;
+    }
+
+    .quick-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        font-size: 0.82rem;
+        font-weight: 500;
+        color: var(--tea-brown);
+        text-decoration: none;
+        padding: 7px 16px;
+        border-radius: 50px;
+        background: var(--cream-dark);
+        border: 1px solid var(--border);
+        transition: var(--transition);
+    }
+
+    .quick-link:hover {
+        background: var(--saffron-light);
+        border-color: var(--saffron);
+        color: var(--saffron-dark);
+        transform: translateY(-2px);
+    }
+
+    .quick-link i {
+        font-size: 0.75rem;
+    }
+
+    /* ── Footer strip ── */
+    .footer-strip {
+        text-align: center;
+        padding: 20px 24px;
+        font-size: 0.8rem;
+        color: var(--text-muted);
+        border-top: 1px solid var(--border);
+        background: var(--cream-dark);
+    }
+
+    .footer-strip a {
+        color: var(--saffron);
+        text-decoration: none;
+    }
+
+    .footer-strip a:hover {
+        text-decoration: underline;
+    }
+
+    /* ── WhatsApp float ── */
+    .whatsapp-float {
+        position: fixed;
+        bottom: 24px;
+        right: 22px;
+        width: 54px;
+        height: 54px;
+        background: #25D366;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        font-size: 1.5rem;
+        text-decoration: none;
+        box-shadow: 0 4px 20px rgba(37, 211, 102, 0.45);
+        z-index: 200;
+        transition: var(--transition);
+    }
+
+    .whatsapp-float:hover {
+        transform: scale(1.1);
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 480px) {
+        .card {
+            padding: 40px 24px;
+            margin: 16px;
+        }
+
+        .error-code {
+            font-size: 4.5rem;
+        }
+
+        .card h1 {
+            font-size: 1.55rem;
+        }
+
+        .btn-group {
+            flex-direction: column;
+            align-items: stretch;
+        }
+
+        .btn {
+            justify-content: center;
+        }
+
+        .nav-home-btn span {
+            display: none;
+        }
+    }
+</style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <div class="logo-icon"><i class="fas fa-mug-hot"></i></div>
+                <div class="logo-text">
+                    <span class="logo-name">Swastika Amruttulya</span>
+                    <span class="logo-tagline">Premium Tea</span>
+                </div>
+            </a>
+            <a href="index.html" class="nav-home-btn">
+                <i class="fas fa-home"></i>
+                <span>Back to Home</span>
+            </a>
+        </div>
+    </nav>
+
+    <!-- Floating decorations -->
+    <main>
+        <span class="leaf">🍃</span>
+        <span class="leaf">🌿</span>
+        <span class="leaf">🍃</span>
+        <span class="leaf">🌿</span>
+        <span class="leaf">🍃</span>
+
+        <div class="card">
+
+            <!-- Animated tea cup -->
+            <div class="cup-wrapper">
+                <svg class="cup-svg" viewBox="0 0 110 110" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Steam lines -->
+                    <path class="steam steam-1" d="M38 30 Q34 22 38 14" stroke="#D97706" stroke-width="2.5"
+                        stroke-linecap="round" fill="none" />
+                    <path class="steam steam-2" d="M55 28 Q51 20 55 12" stroke="#D97706" stroke-width="2.5"
+                        stroke-linecap="round" fill="none" />
+                    <path class="steam steam-3" d="M72 30 Q68 22 72 14" stroke="#D97706" stroke-width="2.5"
+                        stroke-linecap="round" fill="none" />
+                    <!-- Saucer -->
+                    <ellipse cx="55" cy="92" rx="36" ry="7" fill="#F3DFB5" />
+                    <ellipse cx="55" cy="90" rx="36" ry="7" fill="#FEF3C7" stroke="#D97706" stroke-width="1.5" />
+                    <!-- Cup body -->
+                    <path d="M26 52 L32 86 Q55 90 78 86 L84 52 Z" fill="#FEF3C7" stroke="#D97706" stroke-width="2"
+                        stroke-linejoin="round" />
+                    <!-- Tea liquid -->
+                    <path d="M29 62 L32 86 Q55 90 78 86 L81 62 Z" fill="#D97706" opacity="0.25" />
+                    <!-- Cup rim -->
+                    <ellipse cx="55" cy="52" rx="29" ry="7" fill="#FFFBF0" stroke="#D97706" stroke-width="2" />
+                    <!-- Handle -->
+                    <path d="M84 60 Q98 60 98 72 Q98 84 84 84" stroke="#D97706" stroke-width="2.5"
+                        stroke-linecap="round" fill="none" />
+                    <!-- Brand dot on cup -->
+                    <circle cx="55" cy="70" r="7" fill="#D97706" opacity="0.18" />
+                    <text x="55" y="74" text-anchor="middle" font-size="8" fill="#B45309" font-family="serif"
+                        font-weight="700">SA</text>
+                </svg>
+            </div>
+
+            <div class="error-code">404</div>
+
+            <div class="tag"><i class="fas fa-mug-hot"></i> Oops — Tea Gone Cold</div>
+
+            <h1>This Page Has<br /><span>Gone Missing</span></h1>
+
+            <p>
+                Looks like this page wandered off like a forgotten cup of chai.
+                Don't worry — let's get you back to something warm and wonderful.
+            </p>
+
+            <div class="btn-group">
+                <a href="index.html" class="btn btn-primary">
+                    <i class="fas fa-home"></i> Back to Home
+                </a>
+                <a href="menu.html" class="btn btn-outline">
+                    <i class="fas fa-leaf"></i> Browse Our Menu
+                </a>
+            </div>
+
+            <div class="quick-links">
+                <p>Or visit a page</p>
+                <div class="links-row">
+                    <a href="about.html" class="quick-link"><i class="fas fa-info-circle"></i> About Us</a>
+                    <a href="franchise.html" class="quick-link"><i class="fas fa-store"></i> Franchise</a>
+                    <a href="gallery.html" class="quick-link"><i class="fas fa-images"></i> Gallery</a>
+                    <a href="contact.html" class="quick-link"><i class="fas fa-envelope"></i> Contact</a>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer strip -->
+    <div class="footer-strip">
+        © 2024 Swastika Amruttulya Premium Tea &nbsp;·&nbsp;
+        <a href="index.html">Home</a> &nbsp;·&nbsp;
+        <a href="contact.html">Contact Us</a>
+    </div>
+
+    <!-- WhatsApp -->
+    <a href="https://wa.me/919999999999" target="_blank" rel="noopener" class="whatsapp-float" aria-label="WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+</body>
+
+</html>

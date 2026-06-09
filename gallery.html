@@ -1,0 +1,536 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- ================= BASIC SEO ================= -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <title>Gallery – Swastika Amruttulya Premium Tea | Tea Moments & Café Visuals</title>
+
+  <meta name="description"
+    content="Explore Swastika Amruttulya photo gallery featuring premium tea visuals, kulhad chai shots, café interiors, and customer experiences." />
+
+  <meta name="keywords"
+    content="tea gallery, Swastika Amruttulya photos, chai cafe images, kulhad chai, Indian tea shop interior, tea brand visuals" />
+
+  <meta name="author" content="Swastika Amruttulya" />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#8b4513" />
+
+  <!-- ================= CANONICAL ================= -->
+  <link rel="canonical" href="https://swastikamruttulya.co.in/gallery.html" />
+
+  <!-- ================= OPEN GRAPH (SOCIAL PREVIEW) ================= -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Gallery – Swastika Amruttulya Premium Tea" />
+  <meta property="og:description"
+    content="Discover premium tea visuals, kulhad chai moments, café interiors, and customer experiences." />
+
+  <!-- IMPORTANT: Use a real banner image, not favicon -->
+  <meta property="og:image" content="https://swastikamruttulya.co.in/images/preview.jpg" />
+
+  <meta property="og:url" content="https://swastikamruttulya.co.in/gallery.html" />
+
+  <!-- ================= TWITTER CARD ================= -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Gallery – Swastika Amruttulya Tea Brand" />
+  <meta name="twitter:description" content="Explore tea moments, kulhad chai visuals, and café interiors." />
+  <meta name="twitter:image" content="https://swastikamruttulya.co.in/images/preview.jpg" />
+
+  <!-- ================= FAVICON ================= -->
+  <link rel="icon" type="image/png" href="images/favicon.png" />
+  <link rel="apple-touch-icon" href="images/favicon.png" />
+
+  <!-- ================= PERFORMANCE ================= -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <!-- ================= GOOGLE FONTS ================= -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&family=Poppins:wght@300;400;500;600;700&family=Inter:wght@300;400;500&display=swap"
+    rel="stylesheet" />
+
+  <!-- ================= ICONS & LIBRARIES ================= -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" />
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
+
+  <!-- ================= CUSTOM CSS ================= -->
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/animation.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+
+  <!-- ================= IMAGE SEO STRUCTURED DATA ================= -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ImageGallery",
+    "name": "Swastika Amruttulya Gallery",
+    "url": "https://swastikamruttulya.co.in/gallery.html",
+    "description": "Photo gallery showcasing premium Indian tea, café interiors, and customer experiences."
+  }
+  </script>
+
+  <style>
+    .gallery-filter-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      justify-content: center;
+      margin-bottom: 3rem;
+    }
+
+    .g-filter-btn {
+      padding: 9px 22px;
+      border-radius: 50px;
+      border: 2px solid var(--border-color);
+      font-family: var(--font-sub);
+      font-size: 0.86rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      background: var(--white);
+      cursor: pointer;
+      transition: var(--transition);
+    }
+
+    .g-filter-btn:hover,
+    .g-filter-btn.active {
+      background: var(--saffron);
+      color: var(--white);
+      border-color: var(--saffron);
+      box-shadow: 0 4px 14px rgba(217, 119, 6, 0.3);
+    }
+
+    .full-gallery-grid {
+      columns: 3;
+      column-gap: 1.2rem;
+    }
+
+    .full-gallery-item {
+      break-inside: avoid;
+      margin-bottom: 1.2rem;
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      cursor: pointer;
+      position: relative;
+      display: block;
+    }
+
+    .full-gallery-item img {
+      width: 100%;
+      display: block;
+      transition: transform 0.5s ease;
+    }
+
+    .full-gallery-item:hover img {
+      transform: scale(1.06);
+    }
+
+    .full-gallery-item .gallery-item-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(26, 15, 8, 0.55);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transition: var(--transition);
+      color: var(--white);
+    }
+
+    .full-gallery-item:hover .gallery-item-overlay {
+      opacity: 1;
+    }
+
+    .gallery-item-label {
+      font-family: var(--font-sub);
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin-top: 0.5rem;
+    }
+
+    .gallery-stats {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
+      margin-bottom: 4rem;
+    }
+
+    .gstat-card {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      padding: 1.8rem;
+      text-align: center;
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--border-color);
+      transition: var(--transition);
+    }
+
+    .gstat-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-lg);
+      border-color: var(--saffron);
+    }
+
+    .gstat-icon {
+      font-size: 2rem;
+      margin-bottom: 0.8rem;
+    }
+
+    .gstat-num {
+      font-family: var(--font-heading);
+      font-size: 1.8rem;
+      font-weight: 800;
+      color: var(--saffron);
+    }
+
+    .gstat-label {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      font-family: var(--font-sub);
+    }
+
+    @media (max-width: 1023px) {
+      .full-gallery-grid {
+        columns: 2;
+      }
+
+      .gallery-stats {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 767px) {
+      .full-gallery-grid {
+        columns: 1;
+      }
+
+      .gallery-stats {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+      }
+    }
+  </style>
+</head>
+
+<body class="site-loading">
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <div class="logo-icon"><i class="fas fa-mug-hot"></i></div>
+        <div class="logo-text">
+          <span class="logo-name">Swastika Amruttulya</span><span class="logo-tagline">Premium Tea</span>
+        </div>
+      </a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="menu.html" class="nav-link">Menu</a></li>
+        <li><a href="franchise.html" class="nav-link">Franchise</a></li>
+        <li><a href="gallery.html" class="nav-link active">Gallery</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+      <a href="franchise.html" class="btn btn-primary nav-cta">Get Franchise</a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+  <div class="nav-overlay" id="nav-overlay"></div>
+
+  <!-- PAGE HEADER -->
+  <header class="page-header">
+    <div class="page-header-content">
+      <div class="section-tag light" data-aos="fade-down">
+        <i class="fas fa-images"></i> Visual Journey
+      </div>
+      <h1 data-aos="fade-up">Our <span class="text-accent">Gallery</span></h1>
+      <p data-aos="fade-up" data-aos-delay="100">
+        A visual celebration of premium chai, rich flavors, and authentic
+        Indian tea culture.
+      </p>
+      <div class="breadcrumb" data-aos="fade-up" data-aos-delay="200">
+        <a href="index.html">Home</a>
+        <i class="fas fa-chevron-right" style="font-size: 0.7rem"></i>
+        <span>Gallery</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- GALLERY SECTION -->
+  <section class="section-padding">
+    <div class="container">
+      <!-- Stats -->
+      <div class="gallery-stats" data-aos="fade-up">
+        <div class="gstat-card">
+          <div class="gstat-icon">📸</div>
+          <div class="gstat-num">100+</div>
+          <div class="gstat-label">Photos</div>
+        </div>
+        <div class="gstat-card">
+          <div class="gstat-icon">☕</div>
+          <div class="gstat-num">10+</div>
+          <div class="gstat-label">Tea Varieties</div>
+        </div>
+        <div class="gstat-card">
+          <div class="gstat-icon">🏪</div>
+          <div class="gstat-num">120+</div>
+          <div class="gstat-label">Outlets</div>
+        </div>
+        <div class="gstat-card">
+          <div class="gstat-icon">😊</div>
+          <div class="gstat-num">35K+</div>
+          <div class="gstat-label">Daily Happy Customers</div>
+        </div>
+      </div>
+
+      <!-- Filter -->
+      <div class="gallery-filter-bar" data-aos="fade-up">
+        <button class="g-filter-btn active" data-filter="all">All</button>
+        <button class="g-filter-btn" data-filter="tea">Tea Close-ups</button>
+        <button class="g-filter-btn" data-filter="kulhad">Kulhad Chai</button>
+        <button class="g-filter-btn" data-filter="spices">
+          Spices &amp; Ingredients
+        </button>
+        <button class="g-filter-btn" data-filter="cafe">Café Vibes</button>
+      </div>
+
+      <!-- Masonry Gallery Grid -->
+      <div class="full-gallery-grid" id="gallery-grid">
+        <div class="full-gallery-item" data-category="kulhad" data-aos="fade-up">
+          <img src="images/kulhad-tea.webp" alt="Kulhad Chai" loading="lazy" decoding="async" />
+          <div class="gallery-item-overlay">
+            <i class="fas fa-search-plus" style="font-size: 1.5rem"></i>
+            <span class="gallery-item-label">Kulhad Chai</span>
+          </div>
+        </div>
+
+        <div class="full-gallery-item" data-category="tea" data-aos="fade-up" data-aos-delay="50">
+          <img src="images/masala-tea.webp" alt="Masala Chai" loading="lazy" decoding="async" />
+          <div class="gallery-item-overlay">
+            <i class="fas fa-search-plus" style="font-size: 1.5rem"></i>
+            <span class="gallery-item-label">Masala Chai</span>
+          </div>
+        </div>
+
+        <div class="full-gallery-item" data-category="spices" data-aos="fade-up" data-aos-delay="100">
+          <img src="images/masala.webp" alt="Tea Spices" loading="lazy" decoding="async" />
+          <div class="gallery-item-overlay">
+            <i class="fas fa-search-plus" style="font-size: 1.5rem"></i>
+            <span class="gallery-item-label">Premium Spices</span>
+          </div>
+        </div>
+
+        <div class="full-gallery-item" data-category="tea" data-aos="fade-up" data-aos-delay="150">
+          <img src="images/Ginger-Tea.webp" alt="Ginger Tea" loading="lazy" decoding="async" />
+          <div class="gallery-item-overlay">
+            <i class="fas fa-search-plus" style="font-size: 1.5rem"></i>
+            <span class="gallery-item-label">Adrak Chai</span>
+          </div>
+        </div>
+
+        <div class="full-gallery-item" data-category="kulhad" data-aos="fade-up" data-aos-delay="200">
+          <img src="images/kulhad-chai.webp" alt="Tea Pouring Kulhad" loading="lazy" decoding="async" />
+          <div class="gallery-item-overlay">
+            <i class="fas fa-search-plus" style="font-size: 1.5rem"></i>
+            <span class="gallery-item-label">Kulhad Tea Pouring</span>
+          </div>
+        </div>
+
+        <div class="full-gallery-item" data-category="spices" data-aos="fade-up" data-aos-delay="250">
+          <img src="images/Masala-Tea-and-Spices.webp" alt="Tea with Spices" />
+          <div class="gallery-item-overlay">
+            <i class="fas fa-search-plus" style="font-size: 1.5rem"></i>
+            <span class="gallery-item-label">Masala Tea &amp; Spices</span>
+          </div>
+        </div>
+
+        <div class="full-gallery-item" data-category="tea" data-aos="fade-up" data-aos-delay="300">
+          <img src="images/Tea-Pouring.webp" alt="Chai in Earthenware" loading="lazy" decoding="async" />
+          <div class="gallery-item-overlay">
+            <i class="fas fa-search-plus" style="font-size: 1.5rem"></i>
+            <span class="gallery-item-label">Traditional Chai</span>
+          </div>
+        </div>
+
+        <div class="full-gallery-item" data-category="spices" data-aos="fade-up" data-aos-delay="350">
+          <img src="images/Elaichi-Tea.webp" alt="Cardamom Tea" loading="lazy" decoding="async" />
+          <div class="gallery-item-overlay">
+            <i class="fas fa-search-plus" style="font-size: 1.5rem"></i>
+            <span class="gallery-item-label">Elaichi Chai</span>
+          </div>
+        </div>
+
+        <div class="full-gallery-item" data-category="tea" data-aos="fade-up" data-aos-delay="400">
+          <img src="images/Signature-Tea.webp" alt="Chai" loading="lazy" decoding="async" />
+          <div class="gallery-item-overlay">
+            <i class="fas fa-search-plus" style="font-size: 1.5rem"></i>
+            <span class="gallery-item-label">Signature Chai</span>
+          </div>
+        </div>
+
+        <div class="full-gallery-item" data-category="cafe" data-aos="fade-up" data-aos-delay="450">
+          <img src="images/Tea-Moments.webp" alt="Chai Experience" loading="lazy" decoding="async" />
+          <div class="gallery-item-overlay">
+            <i class="fas fa-search-plus" style="font-size: 1.5rem"></i>
+            <span class="gallery-item-label">Chai Moments</span>
+          </div>
+        </div>
+
+        <div class="full-gallery-item" data-category="kulhad" data-aos="fade-up" data-aos-delay="500">
+          <img src="images/Kulhad-Collection.webp" alt="Kulhad Tea Poured" loading="lazy" decoding="async" />
+          <div class="gallery-item-overlay">
+            <i class="fas fa-search-plus" style="font-size: 1.5rem"></i>
+            <span class="gallery-item-label">Kulhad Collection</span>
+          </div>
+        </div>
+
+        <div class="full-gallery-item" data-category="spices" data-aos="fade-up" data-aos-delay="550">
+          <img src="images/Aromatic-Spices.webp" alt="Cardamom Tea Spices" loading="lazy" decoding="async" />
+          <div class="gallery-item-overlay">
+            <i class="fas fa-search-plus" style="font-size: 1.5rem"></i>
+            <span class="gallery-item-label">Aromatic Spices</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LIGHTBOX -->
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox-close" id="lightbox-close" aria-label="Close gallery image">
+      <i class="fas fa-times"></i>
+    </button>
+    <button class="lightbox-prev" id="lightbox-prev" aria-label="Previous gallery image">
+      <i class="fas fa-chevron-left"></i>
+    </button>
+    <button class="lightbox-next" id="lightbox-next" aria-label="Next gallery image">
+      <i class="fas fa-chevron-right"></i>
+    </button>
+    <div class="lightbox-content">
+      <img src="" alt="" loading="lazy" decoding="async" id="lightbox-img" />
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <a href="index.html" class="nav-logo">
+              <div class="logo-icon"><i class="fas fa-mug-hot"></i></div>
+              <div class="logo-text">
+                <span class="logo-name">Swastika Amruttulya</span>
+                <span class="logo-tagline">Premium Tea</span>
+              </div>
+            </a>
+            <p class="footer-desc">
+              Bringing authentic Indian tea culture to every corner of the
+              state with purity, tradition and love.
+            </p>
+            <div class="footer-social">
+              <a href="https://www.facebook.com/profile.php?id=61587796816020" aria-label="Facebook">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="https://www.instagram.com/swastikamruttulya/" aria-label="Instagram">
+                <i class="fab fa-instagram"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="footer-links">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="menu.html">Our Menu</a></li>
+              <li><a href="franchise.html">Franchise</a></li>
+              <li><a href="gallery.html">Gallery</a></li>
+              <li><a href="contact.html">Contact</a></li>
+              <li><a href="privacy-policy.html">Privacy Policy</a></li>
+              <li><a href="terms.html">Terms &amp; Conditions</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-links">
+            <h4>Our Teas</h4>
+            <ul>
+              <li><a href="menu.html">Masala Chai</a></li>
+              <li><a href="menu.html">Elaichi Chai</a></li>
+              <li><a href="menu.html">Adrak Chai</a></li>
+              <li><a href="menu.html">Kulhad Chai</a></li>
+              <li><a href="menu.html">Rose Chai</a></li>
+              <li><a href="menu.html">Chocolate Chai</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-hours">
+            <h4>Outlet Hours</h4>
+            <div class="hours-list">
+              <div class="hours-item">
+                <span>Sunday - Saturday</span>
+                <span>7:00 AM - 10:00 PM</span>
+              </div>
+            </div>
+
+            <div class="footer-hours footer-business-hours">
+              <h4>Business Hours</h4>
+              <div class="hours-list">
+                <div class="hours-item">
+                  <span>Sunday - Saturday</span>
+                  <span>10:00 AM - 6:00 PM</span>
+                </div>
+              </div>
+              <a href="franchise.html" class="btn btn-primary mt-2 btn-sm-full">Open a Franchise</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+        <p>
+          © 2024 Swastika Amruttulya Premium Tea. All rights reserved. |
+          Crafted with <i class="fas fa-heart text-accent"></i> in Jharkhand.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/919288307759?text=Hello%20Swastika%20Amruttulya%2C%20I%20want%20to%20know%20more!"
+    target="_blank" rel="noopener" class="whatsapp-float" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i><span
+      class="whatsapp-tooltip">Chat with us!</span></a>
+  <button class="scroll-top" id="scroll-top" aria-label="Scroll to top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <script defer src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script defer src="js/main.js"></script>
+  <script>
+    // Gallery filter
+    document.querySelectorAll(".g-filter-btn").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        document
+          .querySelectorAll(".g-filter-btn")
+          .forEach((b) => b.classList.remove("active"));
+        btn.classList.add("active");
+        const filter = btn.dataset.filter;
+        document.querySelectorAll(".full-gallery-item").forEach((item) => {
+          if (filter === "all" || item.dataset.category === filter) {
+            item.style.display = "";
+          } else {
+            item.style.display = "none";
+          }
+        });
+      });
+    });
+  </script>
+</body>
+
+</html>

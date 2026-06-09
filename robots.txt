@@ -1,0 +1,19 @@
+User-agent: *
+Allow: /
+
+# Block admin or backend folders if any
+Disallow: /admin/
+Disallow: /private/
+Disallow: /static/js/
+Disallow: /static/css/
+
+# Allow important pages
+Allow: /index.html
+Allow: /about.html
+Allow: /menu.html
+Allow: /franchise.html
+Allow: /gallery.html
+Allow: /contact.html
+
+# Sitemap location
+Sitemap: https://www.swastikamruttulya.co.in/sitemap.xml

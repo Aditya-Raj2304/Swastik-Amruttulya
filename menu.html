@@ -1,0 +1,931 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- ================= BASIC SEO ================= -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <title>Our Menu – Swastika Amruttulya | Premium Indian Tea Varieties</title>
+
+  <meta name="description"
+    content="Explore Swastika Amruttulya's premium tea menu including Masala Chai, Kulhad Chai, Elaichi Chai, Ginger Tea, Tulsi Tea and more authentic Indian tea varieties." />
+
+  <meta name="keywords"
+    content="Swastika Amruttulya menu, tea menu, Indian chai varieties, masala chai, kulhad chai, elaichi chai, ginger tea, tulsi tea, premium tea shop, tea brand India" />
+
+  <meta name="author" content="Swastika Amruttulya" />
+
+  <link rel="canonical" href="https://swastikamruttulya.co.in/menu.html" />
+
+  <!-- ================= FAVICON ================= -->
+  <link rel="icon" type="image/png" href="images/favicon.png" />
+  <link rel="apple-touch-icon" href="images/favicon.png" />
+
+  <!-- ================= OPEN GRAPH (FACEBOOK / WHATSAPP) ================= -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Our Menu – Swastika Amruttulya Premium Tea" />
+  <meta property="og:description"
+    content="Discover authentic Indian tea varieties like Masala Chai, Kulhad Chai, Elaichi Chai and more at Swastika Amruttulya." />
+  <meta property="og:url" content="https://swastikamruttulya.co.in/menu.html" />
+  <meta property="og:image" content="https://swastikamruttulya.co.in/images/og-menu.jpg" />
+
+  <!-- ================= TWITTER CARD ================= -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Our Menu – Swastika Amruttulya Premium Tea" />
+  <meta name="twitter:description"
+    content="Explore premium Indian tea varieties including Masala Chai, Kulhad Chai, and more." />
+  <meta name="twitter:image" content="https://swastikamruttulya.co.in/images/og-menu.jpg" />
+
+  <!-- ================= PRECONNECT (PERFORMANCE) ================= -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <!-- ================= GOOGLE FONTS ================= -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&family=Poppins:wght@300;400;500;600;700&family=Mukta:wght@400;500;600;700&family=Inter:wght@300;400;500&display=swap"
+    rel="stylesheet" />
+
+  <!-- ================= ICONS & LIBRARIES ================= -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
+
+  <!-- ================= CSS FILES ================= -->
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/animation.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+
+  <!-- ================= STRUCTURED DATA (SEO BOOST) ================= -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Menu",
+    "name": "Swastika Amruttulya Tea Menu",
+    "url": "https://swastikamruttulya.co.in/menu.html",
+    "hasMenuSection": [
+      {
+        "@type": "MenuSection",
+        "name": "Hot Beverages",
+        "hasMenuItem": [
+          { "@type": "MenuItem", "name": "Masala Chai" },
+          { "@type": "MenuItem", "name": "Kulhad Chai" },
+          { "@type": "MenuItem", "name": "Elaichi Chai" },
+          { "@type": "MenuItem", "name": "Ginger Tea" },
+          { "@type": "MenuItem", "name": "Tulsi Tea" }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <!-- ================= PERFORMANCE HINT ================= -->
+  <meta name="theme-color" content="#c8f04c" />
+
+  <style>
+    /* ── Filter bar ── */
+    .menu-filter-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      justify-content: center;
+      margin-bottom: 3rem;
+    }
+
+    .filter-btn {
+      padding: 9px 22px;
+      border-radius: 50px;
+      border: 2px solid var(--border-color);
+      font-family: var(--font-sub);
+      font-size: 0.86rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      background: var(--white);
+      cursor: pointer;
+      transition: var(--transition);
+    }
+
+    .filter-btn:hover,
+    .filter-btn.active {
+      background: var(--saffron);
+      color: var(--white);
+      border-color: var(--saffron);
+      box-shadow: 0 4px 14px rgba(217, 119, 6, 0.3);
+    }
+
+    /* ── Section titles ── */
+    .menu-section-title {
+      font-family: var(--font-heading);
+      font-size: 1.6rem;
+      color: var(--tea-brown);
+      margin-bottom: 2rem;
+      padding-bottom: 0.8rem;
+      border-bottom: 2px solid var(--border-color);
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .menu-section-title span {
+      color: var(--saffron);
+    }
+
+    .menu-section {
+      margin-bottom: 4rem;
+    }
+
+    /* ── Item cards (2-col grid) ── */
+    .menu-item-list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.2rem;
+    }
+
+    .menu-item-card {
+      display: flex;
+      align-items: center;
+      gap: 1.2rem;
+      background: var(--white);
+      border-radius: var(--radius-md);
+      padding: 1.2rem;
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--border-color);
+      transition: var(--transition);
+    }
+
+    .menu-item-card:hover {
+      transform: translateX(4px);
+      box-shadow: var(--shadow-md);
+      border-color: var(--saffron);
+    }
+
+    /* Emoji / image thumb */
+    .menu-item-img {
+      width: 80px;
+      height: 80px;
+      border-radius: var(--radius-md);
+      object-fit: cover;
+      flex-shrink: 0;
+    }
+
+    .menu-item-thumb {
+      width: 80px;
+      height: 80px;
+      border-radius: var(--radius-md);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      flex-shrink: 0;
+    }
+
+    .menu-item-info {
+      flex: 1;
+    }
+
+    .menu-item-name {
+      font-family: var(--font-heading);
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--tea-brown);
+      margin-bottom: 0.3rem;
+    }
+
+    .menu-item-desc {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+      margin-bottom: 0.5rem;
+    }
+
+    .menu-item-tags {
+      display: flex;
+      gap: 0.4rem;
+      flex-wrap: wrap;
+    }
+
+    .menu-tag {
+      font-size: 0.7rem;
+      padding: 2px 10px;
+      border-radius: 50px;
+      font-family: var(--font-sub);
+      font-weight: 600;
+    }
+
+    .tag-veg {
+      background: rgba(53, 94, 59, 0.12);
+      color: var(--dark-green);
+    }
+
+    .tag-hot {
+      background: rgba(217, 119, 6, 0.12);
+      color: var(--saffron-dark);
+    }
+
+    .tag-cold {
+      background: rgba(59, 130, 246, 0.12);
+      color: #2563eb;
+    }
+
+    .tag-special {
+      background: rgba(212, 175, 55, 0.15);
+      color: #92740a;
+    }
+
+    .tag-new {
+      background: rgba(16, 185, 129, 0.12);
+      color: #047857;
+    }
+
+    .menu-item-price {
+      font-family: var(--font-sub);
+      font-weight: 800;
+      font-size: 1.05rem;
+      color: var(--saffron-dark);
+      white-space: nowrap;
+    }
+
+    /* ── Kulhad highlight banner ── */
+    .menu-highlight-section {
+      background: linear-gradient(135deg, var(--dark-bg), var(--dark-bg-2));
+      border-radius: var(--radius-xl);
+      padding: 3rem;
+      margin: 4rem 0;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: center;
+    }
+
+    .menu-highlight-content h2 {
+      font-family: var(--font-heading);
+      font-size: 2rem;
+      color: var(--white);
+      margin-bottom: 1rem;
+    }
+
+    .menu-highlight-content p {
+      color: rgba(255, 255, 255, 0.7);
+      font-size: 0.95rem;
+      line-height: 1.7;
+      margin-bottom: 1.5rem;
+    }
+
+    .menu-highlight-img {
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      height: 300px;
+    }
+
+    .menu-highlight-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* ── Special menu cards (shake/cold drinks) ── */
+    .special-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.2rem;
+    }
+
+    .special-card {
+      background: var(--white);
+      border-radius: var(--radius-md);
+      padding: 1.4rem;
+      text-align: center;
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--border-color);
+      transition: var(--transition);
+    }
+
+    .special-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-lg);
+      border-color: var(--saffron);
+    }
+
+    .special-emoji {
+      font-size: 2.5rem;
+      margin-bottom: 0.8rem;
+    }
+
+    .special-name {
+      font-family: var(--font-sub);
+      font-weight: 700;
+      font-size: 0.92rem;
+      color: var(--tea-brown);
+      margin-bottom: 0.3rem;
+    }
+
+    .special-desc {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      margin-bottom: 0.5rem;
+      line-height: 1.4;
+    }
+
+    .special-price {
+      font-size: 0.92rem;
+      color: var(--saffron-dark);
+      font-weight: 700;
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 767px) {
+      .menu-item-list {
+        grid-template-columns: 1fr;
+      }
+
+      .special-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .menu-highlight-section {
+        grid-template-columns: 1fr;
+      }
+
+      .menu-highlight-img {
+        height: 220px;
+      }
+    }
+
+    @media (max-width: 1023px) {
+      .special-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  </style>
+</head>
+
+<body class="site-loading">
+  <!-- ═══════════════════════ NAVBAR ═══════════════════════ -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <div class="logo-icon"><i class="fas fa-mug-hot"></i></div>
+        <div class="logo-text">
+          <span class="logo-name">Swastika Amruttulya</span>
+          <span class="logo-tagline">Premium Tea</span>
+        </div>
+      </a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="menu.html" class="nav-link active">Menu</a></li>
+        <li><a href="franchise.html" class="nav-link">Franchise</a></li>
+        <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+      <a href="franchise.html" class="btn btn-primary nav-cta">Get Franchise</a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+  <div class="nav-overlay" id="nav-overlay"></div>
+
+  <!-- ═══════════════════════ PAGE HEADER ═══════════════════════ -->
+  <header class="page-header">
+    <div class="page-header-content">
+      <div class="section-tag light" data-aos="fade-down">
+        <i class="fas fa-mug-hot"></i> Our Menu
+      </div>
+      <h1 data-aos="fade-up">
+        Explore Our <span class="text-accent">Tea Collection</span>
+      </h1>
+      <p data-aos="fade-up" data-aos-delay="100">
+        Handcrafted teas and special beverages made with premium ingredients
+        and timeless recipes.
+      </p>
+      <div class="breadcrumb" data-aos="fade-up" data-aos-delay="200">
+        <a href="index.html">Home</a>
+        <i class="fas fa-chevron-right" style="font-size: 0.7rem"></i>
+        <span>Menu</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- ═══════════════════════ MENU CONTENT ═══════════════════════ -->
+  <section class="section-padding">
+    <div class="container">
+      <!-- ── Filter Bar ── -->
+      <div class="menu-filter-bar" data-aos="fade-up">
+        <button class="filter-btn active" data-filter="all">All Items</button>
+        <button class="filter-btn" data-filter="classic">Classic Chai</button>
+        <button class="filter-btn" data-filter="special">Special Chai</button>
+        <button class="filter-btn" data-filter="coldbeverages">
+          Cold Beverages
+        </button>
+      </div>
+
+      <!-- ════════════════════════════════════════════════
+           CLASSIC CHAI COLLECTION
+      ════════════════════════════════════════════════ -->
+      <div class="menu-section" data-category="classic" data-aos="fade-up">
+        <h3 class="menu-section-title">
+          <span>☕</span> Classic Chai Collection
+        </h3>
+        <div class="menu-item-list">
+          <!-- Masala Tea -->
+          <div class="menu-item-card" data-aos="fade-up" data-aos-delay="50">
+            <img src="images/masala-tea.webp" alt="Masala Tea" loading="lazy" decoding="async" class="menu-item-img" />
+            <div class="menu-item-info">
+              <div class="menu-item-name">Masala Tea</div>
+              <div class="menu-item-desc">
+                Bold spiced tea brewed with ginger, cardamom, cinnamon &amp;
+                black pepper.
+              </div>
+              <div class="menu-item-tags">
+                <span class="menu-tag tag-veg">Veg</span>
+                <span class="menu-tag tag-hot">Hot</span>
+              </div>
+            </div>
+            <div class="menu-item-price">₹10+</div>
+          </div>
+
+          <!-- Black Tea -->
+          <div class="menu-item-card" data-aos="fade-up" data-aos-delay="100">
+            <img src="images/black-tea.webp" alt="Black Tea" loading="lazy" decoding="async" class="menu-item-img" />
+            <div class="menu-item-info">
+              <div class="menu-item-name">Black Tea</div>
+              <div class="menu-item-desc">
+                Pure, strong black tea brewed from premium CTC leaves —
+                classic and clean.
+              </div>
+              <div class="menu-item-tags">
+                <span class="menu-tag tag-veg">Veg</span>
+                <span class="menu-tag tag-hot">Hot</span>
+              </div>
+            </div>
+            <div class="menu-item-price">₹15+</div>
+          </div>
+
+          <!-- Lemon Tea -->
+          <div class="menu-item-card" data-aos="fade-up" data-aos-delay="150">
+            <img src="images/lemon-tea.webp" alt="Lemon Tea" loading="lazy" decoding="async" class="menu-item-img" />
+            <div class="menu-item-info">
+              <div class="menu-item-name">Lemon Tea</div>
+              <div class="menu-item-desc">
+                Refreshing black tea with a squeeze of fresh lemon — light and
+                energising.
+              </div>
+              <div class="menu-item-tags">
+                <span class="menu-tag tag-veg">Veg</span>
+                <span class="menu-tag tag-hot">Hot</span>
+              </div>
+            </div>
+            <div class="menu-item-price">₹15+</div>
+          </div>
+
+          <!-- Kulhad Tea -->
+          <div class="menu-item-card" data-aos="fade-up" data-aos-delay="200">
+            <img src="images/kulhad-tea.webp" alt="Kulhad Tea" loading="lazy" decoding="async" class="menu-item-img" />
+            <div class="menu-item-info">
+              <div class="menu-item-name">Kulhad Tea</div>
+              <div class="menu-item-desc">
+                Authentic masala chai served in traditional earthen clay
+                kulhad cups.
+              </div>
+              <div class="menu-item-tags">
+                <span class="menu-tag tag-special">Signature</span>
+                <span class="menu-tag tag-hot">Hot</span>
+              </div>
+            </div>
+            <div class="menu-item-price">₹15+</div>
+          </div>
+
+          <!-- Coffee -->
+          <div class="menu-item-card" data-aos="fade-up" data-aos-delay="250">
+            <img src="images/coffee.webp" alt="Coffee" loading="lazy" decoding="async" class="menu-item-img" />
+            <div class="menu-item-info">
+              <div class="menu-item-name">Coffee</div>
+              <div class="menu-item-desc">
+                Rich, aromatic coffee brewed fresh — the perfect companion for
+                your break.
+              </div>
+              <div class="menu-item-tags">
+                <span class="menu-tag tag-veg">Veg</span>
+                <span class="menu-tag tag-hot">Hot</span>
+              </div>
+            </div>
+            <div class="menu-item-price">₹20+</div>
+          </div>
+
+          <!-- Sugar Free Tea -->
+          <div class="menu-item-card" data-aos="fade-up" data-aos-delay="300">
+            <img src="images/sugar-free-tea.webp" alt="Sugar Free Tea" loading="lazy" decoding="async"
+              class="menu-item-img" />
+            <div class="menu-item-info">
+              <div class="menu-item-name">Sugar Free Tea</div>
+              <div class="menu-item-desc">
+                All the flavour of premium chai, naturally brewed without
+                added sugar.
+              </div>
+              <div class="menu-item-tags">
+                <span class="menu-tag tag-veg">Veg</span>
+                <span class="menu-tag tag-special">Healthy</span>
+              </div>
+            </div>
+            <div class="menu-item-price">₹20+</div>
+          </div>
+
+          <!-- Green Tea -->
+          <div class="menu-item-card" data-aos="fade-up" data-aos-delay="50">
+            <img src="images/green-tea.webp" alt="Green Tea" loading="lazy" decoding="async" class="menu-item-img" />
+            <div class="menu-item-info">
+              <div class="menu-item-name">Green Tea</div>
+              <div class="menu-item-desc">
+                Light, antioxidant-rich green tea — ideal for wellness and
+                daily detox.
+              </div>
+              <div class="menu-item-tags">
+                <span class="menu-tag tag-veg">Veg</span>
+                <span class="menu-tag tag-special">Healthy</span>
+              </div>
+            </div>
+            <div class="menu-item-price">₹20+</div>
+          </div>
+
+          <!-- Jaggery Tea -->
+          <div class="menu-item-card" data-aos="fade-up" data-aos-delay="100">
+            <img src="images/jaggery-tea.webp" alt="Gur Chai" loading="lazy" decoding="async"
+              class="menu-item-img" />
+            <div class="menu-item-info">
+              <div class="menu-item-name">Gur Chai</div>
+              <div class="menu-item-desc">
+                Sweetened with natural jaggery for a rich, earthy sweetness —
+                no refined sugar.
+              </div>
+              <div class="menu-item-tags">
+                <span class="menu-tag tag-veg">Veg</span>
+                <span class="menu-tag tag-special">Natural</span>
+              </div>
+            </div>
+            <div class="menu-item-price">₹20+</div>
+          </div>
+
+          <!-- Chocolate Tea -->
+          <div class="menu-item-card" data-aos="fade-up" data-aos-delay="150">
+            <img src="images/chocolate-tea.webp" alt="Chocolate Tea" loading="lazy" decoding="async"
+              class="menu-item-img" />
+            <div class="menu-item-info">
+              <div class="menu-item-name">Chocolate Tea</div>
+              <div class="menu-item-desc">
+                Rich cocoa meets premium chai — an indulgent twist on the
+                classic Indian cup.
+              </div>
+              <div class="menu-item-tags">
+                <span class="menu-tag tag-new">New</span>
+                <span class="menu-tag tag-hot">Hot</span>
+              </div>
+            </div>
+            <div class="menu-item-price">₹20+</div>
+          </div>
+
+          <!-- Badam Keshar Milk -->
+          <div class="menu-item-card" data-aos="fade-up" data-aos-delay="200">
+            <img src="images/badam-keshar-milk.webp" alt="Badam Keshar Milk" loading="lazy" decoding="async"
+              class="menu-item-img" />
+            <div class="menu-item-info">
+              <div class="menu-item-name">Badam Keshar Milk</div>
+              <div class="menu-item-desc">
+                Warm milk infused with saffron strands and almond paste — a
+                royal Ayurvedic drink.
+              </div>
+              <div class="menu-item-tags">
+                <span class="menu-tag tag-special">Premium</span>
+                <span class="menu-tag tag-hot">Hot</span>
+              </div>
+            </div>
+            <div class="menu-item-price">₹30+</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ════════════════════════════════════════════════
+           KULHAD HIGHLIGHT BANNER
+      ════════════════════════════════════════════════ -->
+      <div class="menu-highlight-section" data-aos="fade-up" data-highlight="true">
+        <div class="menu-highlight-content">
+          <div class="section-tag light">
+            <i class="fas fa-award"></i> Signature
+          </div>
+          <h2>
+            The Iconic <span class="text-accent-light">Kulhad Chai</span>
+          </h2>
+          <p>
+            Served in traditional earthen clay cups, our Kulhad Chai delivers
+            an earthy aroma and authentic flavour that no paper or plastic cup
+            can replicate. A sip of heritage in every cup.
+          </p>
+          <div style="display: flex; gap: 0.75rem; flex-wrap: wrap">
+            <div style="
+                  display: flex;
+                  align-items: center;
+                  gap: 0.5rem;
+                  color: rgba(255, 255, 255, 0.7);
+                  font-size: 0.85rem;
+                  font-family: var(--font-sub);
+                ">
+              <i class="fas fa-check" style="color: var(--saffron-light)"></i>
+              100% Clay Kulhad
+            </div>
+            <div style="
+                  display: flex;
+                  align-items: center;
+                  gap: 0.5rem;
+                  color: rgba(255, 255, 255, 0.7);
+                  font-size: 0.85rem;
+                  font-family: var(--font-sub);
+                ">
+              <i class="fas fa-check" style="color: var(--saffron-light)"></i>
+              Eco-Friendly
+            </div>
+            <div style="
+                  display: flex;
+                  align-items: center;
+                  gap: 0.5rem;
+                  color: rgba(255, 255, 255, 0.7);
+                  font-size: 0.85rem;
+                  font-family: var(--font-sub);
+                ">
+              <i class="fas fa-check" style="color: var(--saffron-light)"></i>
+              Authentic Taste
+            </div>
+          </div>
+          <br />
+          <span style="
+                color: var(--saffron-light);
+                font-family: var(--font-heading);
+                font-size: 1.4rem;
+                font-weight: 700;
+              ">₹15 onwards</span>
+        </div>
+        <div class="menu-highlight-img">
+          <img src="images/kulhad-chai.webp" alt="Kulhad Chai" loading="lazy" decoding="async" />
+        </div>
+      </div>
+
+      <!-- ════════════════════════════════════════════════
+           SPECIAL CHAI COLLECTION
+      ════════════════════════════════════════════════ -->
+      <div class="menu-section" data-category="special" data-aos="fade-up">
+        <h3 class="menu-section-title">
+          <span>✨</span> Special Chai Collection
+        </h3>
+        <div class="menu-item-list">
+          <!-- Tulsi Chai -->
+          <div class="menu-item-card" data-aos="fade-up" data-aos-delay="50">
+            <img src="images/tulsi-tea.webp" alt="Tulsi Tea" loading="lazy" decoding="async" class="menu-item-img" />
+            <div class="menu-item-info">
+              <div class="menu-item-name">Tulsi Tea</div>
+              <div class="menu-item-desc">
+                Holy basil infused chai with healing properties and a divine
+                earthy taste.
+              </div>
+              <div class="menu-item-tags">
+                <span class="menu-tag tag-veg">Veg</span>
+                <span class="menu-tag tag-special">Ayurvedic</span>
+              </div>
+            </div>
+            <div class="menu-item-price">₹20+</div>
+          </div>
+
+          <!-- Rose Tea -->
+          <div class="menu-item-card" data-aos="fade-up" data-aos-delay="100">
+            <img src="images/rose-tea.webp" alt="Rose Tea" loading="lazy" decoding="async" class="menu-item-img" />
+            <div class="menu-item-info">
+              <div class="menu-item-name">Rose Tea</div>
+              <div class="menu-item-desc">
+                Delicate rose petals blended with premium tea — a romantic,
+                floral experience.
+              </div>
+              <div class="menu-item-tags">
+                <span class="menu-tag tag-special">Special</span>
+                <span class="menu-tag tag-hot">Hot</span>
+              </div>
+            </div>
+            <div class="menu-item-price">₹20+</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ════════════════════════════════════════════════
+           COLD BEVERAGES (Shakes, Cold Coffee, Lemonade)
+      ════════════════════════════════════════════════ -->
+      <div class="menu-section" data-category="coldbeverages" data-aos="fade-up">
+        <h3 class="menu-section-title"><span>🥤</span> Cold Beverages</h3>
+        <p style="
+              color: var(--text-muted);
+              font-size: 0.9rem;
+              margin-bottom: 1.8rem;
+              font-family: var(--font-sub);
+            ">
+          Refreshing cold beverages &amp; premium shakes
+        </p>
+        <div class="special-grid">
+          <!-- Cold Coffee -->
+          <div class="special-card" data-aos="fade-up" data-aos-delay="50">
+            <img src="images/cold-coffee.webp" alt="Cold Coffee" loading="lazy" decoding="async"
+              class="menu-item-img" />
+            <div class="special-name">Cold Coffee</div>
+            <div class="special-desc">
+              Chilled blended coffee with creamy milk — a cafe-style
+              favourite.
+            </div>
+            <div class="special-price">₹50+</div>
+          </div>
+
+          <!-- Almond Shake -->
+          <div class="special-card" data-aos="fade-up" data-aos-delay="100">
+            <img src="images/almond-shake.webp" alt="Almond Shake" loading="lazy" decoding="async"
+              class="menu-item-img" />
+            <div class="special-name">Almond Shake</div>
+            <div class="special-desc">
+              Thick, nourishing almond milkshake loaded with natural goodness.
+            </div>
+            <div class="special-price">₹50+</div>
+          </div>
+
+          <!-- Oreo Shake -->
+          <div class="special-card" data-aos="fade-up" data-aos-delay="150">
+            <img src="images/oreo-shake.webp" alt="Oreo Shake" loading="lazy" decoding="async" class="menu-item-img" />
+            <div class="special-name">Oreo Shake</div>
+            <div class="special-desc">
+              Creamy milkshake blended with crunchy Oreo cookies — a crowd
+              pleaser.
+            </div>
+            <div class="special-price">₹50+</div>
+          </div>
+
+          <!-- Mango Shake -->
+          <div class="special-card" data-aos="fade-up" data-aos-delay="200">
+            <img src="images/mango-shake.webp" alt="Mango Shake" loading="lazy" decoding="async"
+              class="menu-item-img" />
+            <div class="special-name">Mango Shake</div>
+            <div class="special-desc">
+              Rich, thick mango milkshake made with fresh Alphonso mangoes.
+            </div>
+            <div class="special-price">₹50+</div>
+          </div>
+
+          <!-- Chocolate Shake -->
+          <div class="special-card" data-aos="fade-up" data-aos-delay="250">
+            <img src="images/chocolate-shake.webp" alt="Chocolate Shake" loading="lazy" decoding="async"
+              class="menu-item-img" />
+            <div class="special-name">Chocolate Shake</div>
+            <div class="special-desc">
+              Indulgent chocolate milkshake blended to velvety smooth
+              perfection.
+            </div>
+            <div class="special-price">₹50+</div>
+          </div>
+
+          <!-- Lemonade -->
+          <div class="special-card" data-aos="fade-up" data-aos-delay="300">
+            <img src="images/lemonade.webp" alt="Lemonade" loading="lazy" decoding="async" class="menu-item-img" />
+            <div class="special-name">Lemonade</div>
+            <div class="special-desc">
+              Freshly squeezed lemon with mint and a hint of chaat masala —
+              super refreshing.
+            </div>
+            <div class="special-price">₹20+</div>
+          </div>
+        </div>
+      </div>
+      <!-- END Special Menu -->
+    </div>
+  </section>
+
+  <!-- ═══════════════════════ FOOTER ═══════════════════════ -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <a href="index.html" class="nav-logo">
+              <div class="logo-icon"><i class="fas fa-mug-hot"></i></div>
+              <div class="logo-text">
+                <span class="logo-name">Swastika Amruttulya</span>
+                <span class="logo-tagline">Premium Tea</span>
+              </div>
+            </a>
+            <p class="footer-desc">
+              Bringing authentic Indian tea culture to every corner of the
+              state with purity, tradition and love.
+            </p>
+            <div class="footer-social">
+              <a href="https://www.facebook.com/profile.php?id=61587796816020" aria-label="Facebook">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="https://www.instagram.com/swastikamruttulya/" aria-label="Instagram">
+                <i class="fab fa-instagram"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="footer-links">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="menu.html">Our Menu</a></li>
+              <li><a href="franchise.html">Franchise</a></li>
+              <li><a href="gallery.html">Gallery</a></li>
+              <li><a href="contact.html">Contact</a></li>
+              <li><a href="privacy-policy.html">Privacy Policy</a></li>
+              <li><a href="terms.html">Terms &amp; Conditions</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-links">
+            <h4>Our Teas</h4>
+            <ul>
+              <li><a href="menu.html">Masala Chai</a></li>
+              <li><a href="menu.html">Elaichi Chai</a></li>
+              <li><a href="menu.html">Adrak Chai</a></li>
+              <li><a href="menu.html">Kulhad Chai</a></li>
+              <li><a href="menu.html">Rose Chai</a></li>
+              <li><a href="menu.html">Chocolate Chai</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-hours">
+            <h4>Outlet Hours</h4>
+            <div class="hours-list">
+              <div class="hours-item">
+                <span>Sunday - Saturday</span>
+                <span>7:00 AM - 10:00 PM</span>
+              </div>
+            </div>
+
+            <div class="footer-hours footer-business-hours">
+              <h4>Business Hours</h4>
+              <div class="hours-list">
+                <div class="hours-item">
+                  <span>Sunday - Saturday</span>
+                  <span>10:00 AM - 6:00 PM</span>
+                </div>
+              </div>
+              <a href="franchise.html" class="btn btn-primary mt-2 btn-sm-full">Open a Franchise</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+        <p>
+          © 2024 Swastika Amruttulya Premium Tea. All rights reserved. |
+          Crafted with <i class="fas fa-heart text-accent"></i> in Jharkhand.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp float & scroll-top -->
+  <a href="https://wa.me/919288307759?text=Hello%20Swastika%20Amruttulya%2C%20I%20want%20to%20know%20more!"
+    target="_blank" rel="noopener" class="whatsapp-float" aria-label="WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+    <span class="whatsapp-tooltip">Chat with us!</span>
+  </a>
+  <button class="scroll-top" id="scroll-top" aria-label="Scroll to top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <script defer src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script defer src="js/main.js"></script>
+  <script>
+    // ── Menu filter logic ────────────────────────────────────────────────────
+    const filterBtns = document.querySelectorAll(".filter-btn");
+    const menuSections = document.querySelectorAll(".menu-section");
+    const highlight = document.querySelector('[data-highlight="true"]');
+
+    filterBtns.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        // Toggle active button
+        filterBtns.forEach((b) => b.classList.remove("active"));
+        btn.classList.add("active");
+
+        const filter = btn.dataset.filter;
+
+        menuSections.forEach((section) => {
+          const cat = section.dataset.category;
+          section.style.display =
+            filter === "all" || cat === filter ? "" : "none";
+        });
+
+        // Show the kulhad banner only for 'all' or 'classic'
+        if (highlight) {
+          highlight.style.display =
+            filter === "all" || filter === "classic" ? "" : "none";
+        }
+      });
+    });
+  </script>
+</body>
+
+</html>
