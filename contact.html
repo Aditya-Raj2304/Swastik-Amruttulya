@@ -966,23 +966,54 @@
       });
     });
 
-    // Feedback form
+    // Feedback Form → WhatsApp
     document
       .getElementById("feedback-form")
-      ?.addEventListener("submit", async (e) => {
+      ?.addEventListener("submit", (e) => {
         e.preventDefault();
-        const feedback = document.getElementById("fb-feedback").value.trim();
-        if (!feedback) return;
-        await new Promise((r) => setTimeout(r, 800));
-        document.getElementById("feedback-success").style.display = "flex";
+
+        const name =
+          document.getElementById("fb-name").value.trim() || "Anonymous";
+
+        const outlet =
+          document.getElementById("fb-outlet").value.trim() || "Not Specified";
+
+        const rating = document.getElementById("fb-rating").value || "Not Rated";
+
+        const feedback =
+          document.getElementById("fb-feedback").value.trim();
+
+        if (!feedback) {
+          alert("Please enter your feedback.");
+          return;
+        }
+
+        const message =
+          `⭐ New Customer Feedback
+
+            👤 Name: ${name}
+
+            🏪 Outlet: ${outlet}
+
+            ⭐ Rating: ${rating}/5
+
+            💬 Feedback:
+            ${feedback}`;
+
+        const whatsappNumber = "919288307759";
+
+        const whatsappURL =
+          `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+
+        window.open(whatsappURL, "_blank");
+
         document.getElementById("feedback-form").reset();
+
         selectedRating = 0;
-        document
-          .querySelectorAll(".star")
-          .forEach((s) => (s.textContent = "☆"));
-        setTimeout(() => {
-          document.getElementById("feedback-success").style.display = "none";
-        }, 5000);
+
+        document.querySelectorAll(".star").forEach((s) => {
+          s.textContent = "☆";
+        });
       });
   </script>
 </body>
