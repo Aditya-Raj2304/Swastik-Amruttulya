@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", () => {
       img.setAttribute("loading", "eager");
       img.setAttribute("fetchpriority", "high");
     } else if (!img.hasAttribute("loading")) {
-      img.setAttribute("loading", "lazy");
+      img.setAttribute("loading", "eager");
     }
   });
 
