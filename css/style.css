@@ -2211,3 +2211,135 @@ button:disabled,
     margin-left: 5px;
   }
 }
+
+/* ==========================================
+   PREMIUM 3D CARD EFFECTS
+   Add at the END of style.css
+========================================== */
+
+/* Cards that will have 3D effects */
+.feature-card,
+.tea-card,
+.testimonial-card,
+.fstat-card {
+  position: relative;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+  will-change: transform;
+  cursor: pointer;
+}
+
+/* Smooth hover shadow */
+.feature-card:hover,
+.tea-card:hover,
+.testimonial-card:hover,
+.fstat-card:hover {
+  box-shadow:
+    0 25px 50px rgba(0, 0, 0, 0.15),
+    0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+/* Pop inner elements forward */
+.feature-card .feature-icon,
+.feature-card h3,
+.feature-card p,
+.tea-card img,
+.tea-card .tea-name,
+.tea-card .tea-price,
+.testimonial-card .author-avatar,
+.testimonial-card strong,
+.fstat-card .fstat-number {
+  transform: translateZ(30px);
+}
+
+/* Stronger depth for images */
+.tea-card img {
+  transform: translateZ(40px);
+  transition: transform 0.3s ease;
+}
+
+/* Tea image zoom effect */
+.tea-card:hover img {
+  transform: translateZ(40px) scale(1.05);
+}
+
+/* Franchise stat number pop */
+.fstat-card .fstat-number {
+  font-weight: 700;
+}
+
+/* Premium glow effect */
+.tea-card::before,
+.feature-card::before,
+.testimonial-card::before,
+.fstat-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  background: radial-gradient(
+    circle at top left,
+    rgba(255, 255, 255, 0.15),
+    transparent 50%
+  );
+}
+
+.tea-card:hover::before,
+.feature-card:hover::before,
+.testimonial-card:hover::before,
+.fstat-card:hover::before {
+  opacity: 1;
+}
+
+/* Floating animation */
+@keyframes premiumFloat {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+/* Only tea cards float */
+.tea-card {
+  animation: premiumFloat 6s ease-in-out infinite;
+}
+
+/* Disable float while tilting */
+.tea-card:hover {
+  animation-play-state: paused;
+}
+
+/* Mobile Optimization */
+@media (max-width: 768px) {
+  .feature-card,
+  .tea-card,
+  .testimonial-card,
+  .fstat-card {
+    transform: none !important;
+  }
+
+  .tea-card {
+    animation: none;
+  }
+}
+
+/* Smooth GPU acceleration */
+.feature-card,
+.tea-card,
+.testimonial-card,
+.fstat-card,
+.tea-card img {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  transform-style: preserve-3d;
+}

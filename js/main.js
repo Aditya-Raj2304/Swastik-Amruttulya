@@ -340,4 +340,93 @@ document.addEventListener("DOMContentLoaded", () => {
       }); 
     });
   } */
+
+  /* ==========================================
+   PREMIUM 3D CARD TILT EFFECT
+   Add at END of main.js
+========================================== */
+
+  (function () {
+    // Disable on touch devices
+    if (
+      window.innerWidth <= 768 ||
+      "ontouchstart" in window ||
+      navigator.maxTouchPoints > 0
+    ) {
+      return;
+    }
+
+    const cards = document.querySelectorAll(
+      ".feature-card, .tea-card, .testimonial-card, .fstat-card",
+    );
+
+    cards.forEach((card) => {
+      let frameId = null;
+
+      card.addEventListener("mousemove", (e) => {
+        if (frameId) {
+          cancelAnimationFrame(frameId);
+        }
+
+        frameId = requestAnimationFrame(() => {
+          const rect = card.getBoundingClientRect();
+
+          const mouseX = e.clientX - rect.left;
+          const mouseY = e.clientY - rect.top;
+
+          const centerX = rect.width / 2;
+          const centerY = rect.height / 2;
+
+          const rotateY = ((mouseX - centerX) / centerX) * 10;
+          const rotateX = -((mouseY - centerY) / centerY) * 10;
+
+          card.style.transform = `
+                    perspective(1000px)
+                    rotateX(${rotateX}deg)
+                    rotateY(${rotateY}deg)
+                    translateY(-6px)
+                    scale(1.02)
+                `;
+        });
+      });
+
+      card.addEventListener("mouseleave", () => {
+        card.style.transition = "transform 0.5s cubic-bezier(.17,.67,.21,1.01)";
+
+        card.style.transform = `
+                perspective(1000px)
+                rotateX(0deg)
+                rotateY(0deg)
+                translateY(0)
+                scale(1)
+            `;
+
+        setTimeout(() => {
+          card.style.transition = "";
+        }, 500);
+      });
+    });
+  })();
+
+  /* ==========================================
+   HERO PARALLAX EFFECT
+========================================== */
+
+  (function () {
+    if (window.innerWidth <= 768 || "ontouchstart" in window) {
+      return;
+    }
+
+    const heroContent = document.querySelector(".hero-content");
+
+    if (!heroContent) return;
+
+    document.addEventListener("mousemove", (e) => {
+      const x = (e.clientX / window.innerWidth - 0.5) * 15;
+
+      const y = (e.clientY / window.innerHeight - 0.5) * 15;
+
+      heroContent.style.transform = `translate(${x}px, ${y}px)`;
+    });
+  })();
 });
