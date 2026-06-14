@@ -1,5 +1,5 @@
 /* =============================================
-   SWASTIKA AMRUTTULYA - Forms JavaScript
+   Swastik AMRUTTULYA - Forms JavaScript
    ============================================= */
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -151,7 +151,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       setLoading(submitBtn, true, "Sending...");
       openWhatsApp(
-        `*New Message - Swastika Amruttulya*\n\n` +
+        `*New Message - Swastik Amruttulya*\n\n` +
           `*Name:* ${payload.fullName}\n` +
           `*Mobile:* ${payload.mobile}\n` +
           `*City:* ${payload.city}\n` +
@@ -228,7 +228,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       setLoading(submitBtn, true, "Submitting...");
       openWhatsApp(
-        `*New Franchise Application - Swastika Amruttulya*\n\n` +
+        `*New Franchise Application - Swastik Amruttulya*\n\n` +
           `*Name:* ${payload.fullName}\n` +
           `*Mobile:* ${payload.mobile}\n` +
           `*Email:* ${payload.email || "N/A"}\n` +

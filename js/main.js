@@ -1,5 +1,5 @@
 /* =============================================
-   SWASTIKA AMRUTTULYA - Main JavaScript
+   Swastik AMRUTTULYA - Main JavaScript
    ============================================= */
 
 document.addEventListener("DOMContentLoaded", () => {
